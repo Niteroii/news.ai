@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
-LABEL maintainer="Robson Tenório"
-LABEL site="https://github.com/robsontenorio/laravel-docker"
+LABEL maintainer="Stefan Izdrail"
+LABEL site="https://github.com/cornatul/news.ai"
 RUN apt update
 ENV TZ=UTC
 ENV LANG="C.UTF-8"
@@ -9,10 +9,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV CONTAINER_ROLE=${CONTAINER_ROLE:-APP}
 
 WORKDIR /var/www/app
-
-
-
-
 
 RUN apt update \
   # Add PHP 8.1 repository
