@@ -1,5 +1,7 @@
 <?php
 
+use Thujohn\Twitter\TwitterServiceProvider;
+
 return [
 
     /*
@@ -39,7 +41,7 @@ return [
     |
     */
 
-    'debug' => (bool) env('APP_DEBUG', false),
+    'debug' => (bool) env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -180,7 +182,8 @@ return [
         Cornatul\Feeds\FeedsServiceProvider::class,
         //WordPress Service Provider
         Cornatul\Wordpress\WordpressServiceProvider::class,
-
+        //Social Service Provider
+        Cornatul\Social\SocialServiceProvider::class,
     ],
 
     /*
@@ -232,6 +235,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Twitter' => \Thujohn\Twitter\TwitterFacade::class,
 
     ],
 

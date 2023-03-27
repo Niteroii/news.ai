@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\ApiTokenController;
+use App\Http\Controllers\SocialLoginController;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -107,3 +108,8 @@ Route::middleware(['auth', 'verified', RequireWorkspace::class])->group(
 );
 
 MarketingPortal::publicWebRoutes();
+
+
+///
+Route::get('login/linkedin', [SocialLoginController::class, 'loginWithLinkedIn']);
+Route::get('login/linkedin/callback', [SocialLoginController::class, 'handleLonginWithLinkedIn']);

@@ -5,16 +5,19 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
+        "atymic/twitter": "3.*",
         "cornatul/crawler": "@dev",
         "cornatul/feeds": "@dev",
         "cornatul/marketing": "@dev",
         "cornatul/news": "@dev",
+        "cornatul/social": "@dev",
         "cornatul/wordpress": "@dev",
         "enqueue/amqp-bunny": "^0.10.0@dev",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "imelgrat/opml-parser": "dev-master",
+        "jonathantorres/medium-sdk": "dev-master",
         "laminas/laminas-feed": "2.0.0",
         "laminas/laminas-http": "2.0.0",
         "laminas/laminas-servicemanager": "2.0.0",
@@ -23,14 +26,22 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.0",
         "league/html-to-markdown": "^5.2@dev",
+        "league/oauth1-client": "^1.10",
+        "league/oauth2-instagram": "dev-main",
+        "league/oauth2-linkedin": "^5.1",
         "livewire/livewire": "^2.3",
         "php-amqplib/php-amqplib": "^3.5",
         "sammyjo20/saloon-cache-plugin": "^2.0",
         "sammyjo20/saloon-laravel": "^2.0",
+        "smolblog/oauth2-twitter": "dev-main",
+        "spatie/laravel-query-builder": "dev-main",
         "swiftmailer/swiftmailer": "5.x-dev",
-        "vladimir-yuldashev/laravel-queue-rabbitmq": "^13.2"
+        "vladimir-yuldashev/laravel-queue-rabbitmq": "^13.2",
+        "zofe/demo-module": "dev-main",
+        "zofe/rapyd-livewire": "dev-main"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.8@dev",
         "mockery/mockery": "^1.4.2",
         "phpunit/phpunit": "^9.3.3"
     },
@@ -39,7 +50,8 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "zofe/rapyd-module-installer": true
         }
     },
     "extra": {
@@ -65,6 +77,7 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
+
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -94,6 +107,10 @@
         {
             "type": "path",
             "url": "packages/wordpress"
+        },
+        {
+            "type": "path",
+            "url": "packages/social"
         }
     ]
 }
