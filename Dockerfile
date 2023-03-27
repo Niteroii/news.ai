@@ -31,6 +31,7 @@ RUN apt update \
   php8.1-opcache \
   php8.1-xml \
   php8.1-zip \
+  php8.1-intl \
   # Extra
   curl \
   git \
@@ -39,7 +40,6 @@ RUN apt update \
   nginx \
   supervisor \
   unzip \
-  intl \
   zsh
 
 COPY . .

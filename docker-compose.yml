@@ -3,7 +3,7 @@ networks:
         driver: bridge
 services:
     app:
-        image: unixdevil/cms
+        image: cornatul/news.ai:latest
         environment:
             - CONTAINER_ROLE=ALL
         volumes:
