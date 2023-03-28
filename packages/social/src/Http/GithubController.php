@@ -4,6 +4,7 @@ namespace Cornatul\Social\Http;
 
 
 
+use Cornatul\Social\Objects\Message;
 use Cornatul\Social\Service\GithubService;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Http\Request;
@@ -81,8 +82,14 @@ class GithubController extends Controller
     {
         $accessToken = session()->get('github_access_token');
 
-        $message = $request->input('message');
+        $request->validate([
+            'title' => 'required',
+            'message' => 'required',
+        ]);
 
+        $message = new Message();
+        $message->setBody($request->input('message'));
+        $message->setTitle($request->input('title'));
 
         $this->service->createGist($accessToken, $message);
 

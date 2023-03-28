@@ -11,7 +11,7 @@ use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Provider\LinkedIn;
 use League\OAuth2\Client\Token\LinkedInAccessToken;
 
-class LinkedInService
+class PinterestService
 {
     private LinkedIn $provider;
 

@@ -20,9 +20,10 @@ class MediumService
         $data = [
             'title' => $message->getTitle(),
             'contentFormat' => 'markdown',
-            'content' => $message->getBody(),
+            'content' => $message->getBody() . " ". Message::SIGNATURE,
+            'canonicalUrl' => $message->getUrl(),
             'publishStatus' => 'public',
-            'tags' => $message->getTags(),
+            'tags' => $message->getTagsAsArray(),
         ];
 
         return $medium->createPost($user->data->id, $data);

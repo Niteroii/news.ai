@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"Cornatul\\Social\\Tests\\Unit\\SocialTest::test_social_engine":0.009}}
+{"version":1,"defects":{"Cornatul\\Social\\Tests\\Unit\\SocialTest::test_can_get_twitter_trends":8},"times":{"Cornatul\\Social\\Tests\\Unit\\SocialTest::test_social_engine":0.011,"Cornatul\\Social\\Tests\\Unit\\SocialTest::test_can_get_twitter_trends":0.014,"Cornatul\\Social\\Tests\\Unit\\SocialTest::test_can_get_github_trends":0.001}}
